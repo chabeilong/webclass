@@ -5,13 +5,13 @@ body {
   margin:           0px;
 }
 
-.header {
+header {
   background-color: #675c47;
   margin:           10px;
   height:           108px;
 }
 
-.main {
+section.main {
   display: table-cell; /* 显示方式 */
   vertical-align: top;  /* 垂直对齐: 顶端对齐 */
   background:       #efe5d0 url(images/background.gif) top left; /* 背景颜色 */
@@ -20,7 +20,7 @@ body {
   margin:           0px 10px 10px 10px;
 }
 
-.sidebar {
+.tableCell aside {
   display: table-cell;  /* 显示方式 */
   vertical-align: top;   /*垂直对齐: 顶端对齐 */
   background:       #efe5d0 url(images/background.gif) bottom right; /* 背景颜色 */
@@ -30,7 +30,7 @@ body {
   /*width:            200px;*/
 }
 
-.footer {
+footer {
   background-color: #675c47;
   color:            #efe5d0;
   text-align:       center;
@@ -106,7 +106,7 @@ div.left-header {
 	left: 45%;
   width: 100px;
   height: 100px;
- animation: rotate 0.5s linear infinite;
+ /*animation: rotate 0.5s linear infinite;*/
 }
 @keyframes rotate {
   0% {
@@ -121,7 +121,7 @@ div.left-header {
 	top: 350px;
 	left: -210px;
   transition: left 0.5s ease;
-  animation: rotate 0.5s linear infinite;
+  /*animation: rotate 0.5s linear infinite;*/
 }
 .coupon a, img{
 	border: none;
