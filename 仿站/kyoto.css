@@ -1,0 +1,32 @@
+img{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    height: 520px;
+    width: 100%;
+}
+h3{
+   /*font-family: "Noto Sans JP",sans-serif;*/
+   font-family: Yu Gothic Medium;
+   font-size: 1.7em;
+   display: block;/*让元素以块级元素的方式显示*/
+   font-weight:normal;/*设置字体粗细*/;
+   color: rgb(255,255,255);
+   margin-top:0px;
+   margin-bottom: 0px;
+   position: relative;
+   top:-198px ;
+   left: 213px;
+}
+.box{
+  /*padding-top: 12px;
+  padding-bottom: 10px;*/
+  height: 93px;
+  width: 100%;
+ /* background-color: #165eb1(22, 94, 177, 0.5);  /* 设置蓝色背景，透明度为 0.5 */
+  background-color: rgba(0, 19, 55, 0.6);  /* 设置蓝色背景，透明度为 0.6 */
+  position: relative;
+  top:-110px;
+  left: 0;
+}
