@@ -17,6 +17,7 @@ img{
    position: relative;
    top:-198px ;
    left: 213px;
+   width: 793px;
 }
 .box{
   /*padding-top: 12px;
@@ -30,25 +31,27 @@ img{
   left: 0;
 }
 .sectent1{
-  font-family:Lora, "Noto Sans JP", serif;
-  font-family:sans-serif;
+  font-family:Lora, "Lora Medium";
   color: rgb(0,32,91);
   display: block;/*让元素以块级元素的方式显示*/ 
   /*font-weight:bold;
   font-size: 24px;*/
-  border-left-color: rgb(0,32,91);
+  /*border-left-color: rgb(0,32,91);
   border-top-color: rgb(0,32,91);
-  border-right-color: rgb(0,32,91);
+  border-right-color: rgb(0,32,91);*/
   position: relative;
   top:-140px;
   left: 660px;
-  font-size: 2.5em;
+  font-size: 2em;
   margin-top: 0px;
   margin-bottom: 0px;
+  width: 330px;
+  font-weight: normal;
 }
 html{
   background-color: rgb(16,18,20,0.15);
 }
+
 .bigbox{
   width: 1300px;
   height: 90px;
@@ -68,4 +71,70 @@ html{
   left: 130px;
   top:-135px;
   margin-bottom: 0px;
+}
+.littlebox{
+  width: 115px;
+  height: 28px;
+  background-color: rgb(0,32,91); 
+  position: relative;
+  top: -300px;
+  left: 180px;
+  white-space: nowrap;/*不换行*/;
+}
+.littlebox1{
+  width: 115px;
+  height: 28px;
+  background-color: rgb(0,32,91); 
+  position: relative;
+  top: -220px;
+  left: 180px;
+  white-space: nowrap;/*不换行*/;
+}
+span{
+  color: rgb(255,255,255);
+  font-family: "Noto Sans JP";
+  font-size: 13px;
+}
+time{
+  color: rgb(63,65,69);
+  /*display:inline;*/
+  font-size: small;
+}
+.date{
+  position: relative;
+  left: 78px; 
+}
+.date1{
+  position: relative;
+  left: 38px;
+}
+.notice{
+  position: relative;
+  /*top:1px;*/
+  left:32px;
+}
+.notice1{
+  position: relative;
+  top:2px;
+  left:12px; 
+}
+.article{
+  color: rgb(0,0,0);
+  font-size: 0.98em;
+  position: relative;
+  left: 90px;
+}
+.article1{
+  color: rgb(0,0,0);
+  font-size: 0.98em;
+  position: relative;
+  left: 48px; 
+}
+a{
+ color: rgb(0,0,0);
+ text-decoration: none; /* 去掉下划线 */
+}
+a:hover{
+  color: rgb(0,0,0);
+  text-decoration: underline; /* 鼠标悬停时显示下划线 */;
 }
