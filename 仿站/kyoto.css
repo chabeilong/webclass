@@ -5,6 +5,7 @@ img{
     display: block;
     height: 520px;
     width: 100%;
+    z-index: -1;/*设置元素的堆叠顺序*/;
 }
 .sectent{
    font-family: Yu Gothic Medium;
@@ -27,7 +28,7 @@ img{
  /* background-color: #165eb1(22, 94, 177, 0.5);  /* 设置蓝色背景，透明度为 0.5 */
   background-color: rgba(0, 19, 55, 0.6);  /* 设置蓝色背景，透明度为 0.6 */
   position: relative;
-  top:-109px;
+  top:-113px;
   left: 0;
 }
 .sectent1{
@@ -138,8 +139,44 @@ a:hover{
   color: rgb(0,0,0);
   text-decoration: underline; /* 鼠标悬停时显示下划线 */;
 }
-.k{
-width: 0;
-height: 0;
+.image{
+  position: relative;
+  display:inline-block;
+  z-index: 0; 
+}
+.image:hover::before{
+  z-index: 1; 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1; 
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5); 
+} 
+/*.zong{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}*/
+.jt1{
+/*width: 50%;
+height: 50%;
 border-top: 20px solid transparent;
+border-bottom: 20px solid transparent;
+  border-left: 30px solid #a5b4e7;*/
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #165eb1;
+  background: #9b59b6;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
 }
