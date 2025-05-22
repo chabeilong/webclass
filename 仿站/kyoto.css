@@ -1,12 +1,3 @@
-img{
-    width: 100%;
-    position: relative;
-    box-sizing: border-box;
-    display: block;
-    height: 520px;
-    width: 100%;
-    z-index: -1;/*设置元素的堆叠顺序*/;
-}
 .sectent{
    font-family: Yu Gothic Medium;
    font-size: 1.7em;
@@ -52,7 +43,9 @@ img{
 html{
   background-color: rgb(16,18,20,0.15);
 }
-
+body{
+ width: 1500px;
+}
 .bigbox{
   width: 1300px;
   height: 90px;
@@ -139,44 +132,277 @@ a:hover{
   color: rgb(0,0,0);
   text-decoration: underline; /* 鼠标悬停时显示下划线 */;
 }
-.image{
+a.image{
   position: relative;
   display:inline-block;
-  z-index: 0; 
+  overflow: hidden;
+  text-decoration: none;/*去掉下划线*/
+  width: 100%;
+  height: 520px;
 }
-.image:hover::before{
-  z-index: 1; 
-  content: "";
+a.image::after{
+  content: "";/*伪元素的内容为空*/
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 1; 
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5); 
-} 
-/*.zong{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}*/
-.jt1{
-/*width: 50%;
-height: 50%;
-border-top: 20px solid transparent;
-border-bottom: 20px solid transparent;
-  border-left: 30px solid #a5b4e7;*/
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #165eb1;
-  background: #9b59b6;
-  border: none;
-  border-radius: 50%;
+  /*box-shadow:inset 0 0 20px 500px rgb(0, 32, 91, 0.3);/*阴影效果*/
+  background: rgba(0,32,91,0.1); 
+  opacity: 0;/*初始时隐藏*/
+  /*transition: opacity 0.3s ease;/*过渡效果*/
+  pointer-events:none;/*鼠标事件*/
+  z-index: 1;
+ /* background: transparent;*/
+}
+ a.image:hover::after{
+  opacity: 1;/*鼠标悬停时显示*/
+}
+
+a.image img{
+  width: 100%;
+  /*position: relative;
+  box-sizing: border-box;*/
+  display: block;
+  height: 520px;
+  object-fit: cover;/*保持图片比例不变，填充整个容器*/
+  /*transition: box-shadow 0.3s ease;/*过渡效果*/
+  /*box-shadow:inset 0 0 20px 500px rgb(0, 32, 91, 0.3);*/
+}
+
+.leftjt, .rightjt {
+  position: relative;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  transition: all 0.2s;
+  display: inline-block;
   cursor: pointer;
+    z-index: 1000;
+    max-width: 100vw;
+    max-height: 100vh;
+    pointer-events: auto;
+}
+.leftjt {
+  position: relative;
+  left: 1160px;
+  top: -530px;
+  transform:  rotate(-135deg);
+}
+.rightjt {
+  position: relative;
+  right: -1370px;
+  top: -530px;
+  transform:  rotate(45deg);
+  }
+    /* 悬停效果 */
+    .leftjt:hover {
+      border-color: #ccc;
+    }
+    .rightjt:hover {
+      border-color: #ccc;
+    }
+    /* 定义方块的目标状态 */
+:target ~ .square-wrapper .square1,
+:target ~ .square-wrapper .square2,
+:target ~ .square-wrapper .square3,
+:target ~ .square-wrapper .square4,
+:target ~ .square-wrapper .square5 {
+  background-color: white; /* 默认恢复白色 */
+}
+/* 左箭头点击效果 */
+#left:target ~ .square-wrapper:nth-child(3) .square1,
+#left:target ~ .square-wrapper:nth-child(4) .square2,
+#left:target ~ .square-wrapper:nth-child(5) .square3,
+#left:target ~ .square-wrapper:nth-child(6) .square4,
+#left:target ~ .square-wrapper:nth-child(7) .square5 {
+  background-color: rgb(222,169,90);
+}
+/* 右箭头点击效果 */
+#right:target ~ .square-wrapper:nth-child(3) .square1,
+#right:target ~ .square-wrapper:nth-child(4) .square2,
+#right:target ~ .square-wrapper:nth-child(5) .square3,
+#right:target ~ .square-wrapper:nth-child(6) .square4,
+#right:target ~ .square-wrapper:nth-child(7) .square5 {
+  background-color: rgb(222,169,90);
+}
+  .square1,.square2,.square3,.square4,.square5{
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255,255,255);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none; /* 去掉默认的焦点外框 */;
+  }
+  .square-wrapper {
+    display: inline-block; /* 防止label换行 */
+    position: relative;
+
+  }
+
+/* 悬停效果 */
+.square-wrapper:hover .square1,
+.square-wrapper:hover .square2,
+.square-wrapper:hover .square3,
+.square-wrapper:hover .square4,
+.square-wrapper:hover .square5 {
+  background-color: rgb(200, 200, 200);
+}
+/* 隐藏复选框 */
+.square-checkbox {
+  position: fixed;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  /*left: -9999px;*/
+/* 单选按钮样式 */
+}
+/* 当label获得焦点时变黄 */
+.square-wrapper:focus-within .square1,
+.square-wrapper:focus-within .square2,
+.square-wrapper:focus-within .square3,
+.square-wrapper:focus-within .square4,
+.square-wrapper:focus-within .square5 {
+  background-color: rgb(222,169,90);
+}
+
+/* 点击其他区域时恢复白色（通过html的点击事件） */
+html:active .square-wrapper:not(:active):not(:focus-within) .square1,
+html:active .square-wrapper:not(:active):not(:focus-within) .square2,
+html:active .square-wrapper:not(:active):not(:focus-within) .square3,
+html:active .square-wrapper:not(:active):not(:focus-within) .square4,
+html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
+  background-color: white;
+}
+
+.square1{
+  /*width: 12px;
+  height: 12px; 
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -530px;
+  left: 1170px;
+}
+.square2{
+  /*width: 12px;
+  height: 12px;
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -530px;
+  left: 1217px;
+}
+.square3{
+  /*width: 12px;
+  height: 12px;
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -530px;
+  left: 1230px;
+}
+.square4{
+ /* width: 12px;
+  height: 12px;
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -530px;
+  left: 1240px;
+}
+.square5{
+  /*width: 12px;
+  height: 12px;
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -530px;
+  left: 1135px;
+}
+.container {
+  position: relative;
+  top: -553px;
+  left: 1355px;
+  margin: 0px;
+  width: 50px;
+}
+
+.play-pause-btn {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.state-toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.play-icon, .pause-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.play-icon {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid rgba(184, 178, 178, 0.484);
+  margin-left: 2px;
+  
+}
+
+.pause-icon {
+  opacity: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.2s;
+  gap: 8px;
+
+}
+
+.bar {
+  width: 4px;
+  height: 15px;
+  background-color: rgba(184, 178, 178, 0.484);
+}
+
+.state-toggle:checked ~ .play-icon {
+  opacity: 0;
+}
+
+.state-toggle:checked ~ .pause-icon {
+  opacity: 1;
+}
+
+.play-pause-btn:hover {
+  transform: scale(1.05);
+}
+
+.play-pause-btn:active {
+  transform: scale(0.95);
+}
+.sanjiao {
+  width:0px ;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 5px solid rgb(222,169,90); /* 三角形颜色 */
+  transform: rotate(90deg); /* 关键旋转属性 */
+  transform-origin: center; /* 旋转中心点 */
+  position: relative;
+  top: -575px;
+  left: 156px;
+}
+.juxing{
+  width: 50px;
+  height: 13.8px;
+  background-color: rgb(222,169,90);
+  position: relative;
+  top: -585px;
+  left: 112px;
 }
