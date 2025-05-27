@@ -7,7 +7,7 @@
    margin-top:0px;
    margin-bottom: 0px;
    position: relative;
-   top:-198px ;
+   top:-450px ;
    left: 213px;
    width: 793px;
 }
@@ -15,11 +15,11 @@
   /*padding-top: 12px;
   padding-bottom: 10px;*/
   height: 93px;
-  width: 100%;
+  width: 1580px;
  /* background-color: #165eb1(22, 94, 177, 0.5);  /* 设置蓝色背景，透明度为 0.5 */
   background-color: rgba(0, 19, 55, 0.6);  /* 设置蓝色背景，透明度为 0.6 */
   position: relative;
-  top:-113px;
+  top:-367px;
   left: 0;
 }
 .sectent1{
@@ -32,7 +32,7 @@
   border-top-color: rgb(0,32,91);
   border-right-color: rgb(0,32,91);*/
   position: relative;
-  top:-140px;
+  top:-365px;
   left: 660px;
   font-size: 2em;
   margin-top: 0px;
@@ -52,7 +52,7 @@ body{
   background-color: rgb(255,255,255);
   display: block;
   position: relative;
-  top:-135px;
+  top:-355px;
   left: 130px;
   margin-bottom: 0px;
 }
@@ -63,7 +63,7 @@ body{
   display: block;
   position: relative;
   left: 130px;
-  top:-135px;
+  top:-355px;
   margin-bottom: 0px;
 }
 .littlebox{
@@ -71,7 +71,7 @@ body{
   height: 28px;
   background-color: rgb(0,32,91); 
   position: relative;
-  top: -300px;
+  top: -520px;
   left: 180px;
   white-space: nowrap;/*不换行*/;
 }
@@ -80,7 +80,7 @@ body{
   height: 28px;
   background-color: rgb(0,32,91); 
   position: relative;
-  top: -220px;
+  top: -440px;
   left: 180px;
   white-space: nowrap;/*不换行*/;
 }
@@ -135,12 +135,13 @@ a:hover{
 a.image{
   position: relative;
   display:inline-block;
-  overflow: hidden;
+  /*overflow: hidden;             /* 隐藏溢出部分 */
   text-decoration: none;/*去掉下划线*/
-  width: 100%;
-  height: 520px;
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: transparent;
 }
 a.image::after{
   content: "";/*伪元素的内容为空*/
@@ -149,7 +150,7 @@ a.image::after{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 67%;
   /*box-shadow:inset 0 0 20px 500px rgb(0, 32, 91, 0.3);/*阴影效果*/
   background: rgba(0,32,91,0.1); 
   opacity: 0;/*初始时隐藏*/
@@ -163,14 +164,16 @@ a.image::after{
 }
 
 a.image img{
-  width: 100%;
+  width: 1580px;
   /*position: relative;
   box-sizing: border-box;*/
   display: block;
   height: 520px;
-  object-fit: cover;/*保持图片比例不变，填充整个容器*/
+  /*object-fit: cover;/*保持图片比例不变，填充整个容器*/
   /*transition: box-shadow 0.3s ease;/*过渡效果*/
   /*box-shadow:inset 0 0 20px 500px rgb(0, 32, 91, 0.3);*/
+  margin: 0;
+  padding: 0;
 }
 
 .leftjt, .rightjt {
@@ -191,13 +194,13 @@ a.image img{
 .leftjt {
   position: relative;
   left: 1160px;
-  top: -530px;
+  top: -800px;
   transform:  rotate(-135deg);
 }
 .rightjt {
   position: relative;
   right: -1370px;
-  top: -530px;
+  top: -800px;
   transform:  rotate(45deg);
   }
     /* 悬停效果 */
@@ -287,7 +290,7 @@ html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
   height: 12px; 
   background-color: rgb(255,255,255);
   position: relative;*/
-  top: -530px;
+  top: -800px;
   left: 1170px;
 }
 .square2{
@@ -295,7 +298,7 @@ html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
   height: 12px;
   background-color: rgb(255,255,255);
   position: relative;*/
-  top: -530px;
+  top: -800px;
   left: 1217px;
 }
 .square3{
@@ -303,7 +306,7 @@ html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
   height: 12px;
   background-color: rgb(255,255,255);
   position: relative;*/
-  top: -530px;
+  top: -800px;
   left: 1230px;
 }
 .square4{
@@ -311,7 +314,7 @@ html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
   height: 12px;
   background-color: rgb(255,255,255);
   position: relative;*/
-  top: -530px;
+  top: -800px;
   left: 1240px;
 }
 .square5{
@@ -319,12 +322,12 @@ html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
   height: 12px;
   background-color: rgb(255,255,255);
   position: relative;*/
-  top: -530px;
+  top: -800px;
   left: 1135px;
 }
 .container {
   position: relative;
-  top: -553px;
+  top: -820px;
   left: 1355px;
   margin: 0px;
   width: 50px;
@@ -397,7 +400,7 @@ html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
   transform: rotate(90deg); /* 关键旋转属性 */
   transform-origin: center; /* 旋转中心点 */
   position: relative;
-  top: -575px;
+  top: -825px;
   left: 156px;
 }
 .juxing{
@@ -405,6 +408,6 @@ html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
   height: 13.8px;
   background-color: rgb(222,169,90);
   position: relative;
-  top: -585px;
+  top: -835px;
   left: 112px;
 }
