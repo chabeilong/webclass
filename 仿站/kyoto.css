@@ -356,9 +356,9 @@ html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
 }
 
 .play-icon {
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid rgba(184, 178, 178, 0.484);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 12px solid rgba(184, 178, 178, 0.484);
   margin-left: 2px;
   
 }
